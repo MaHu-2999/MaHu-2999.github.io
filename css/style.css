@@ -375,5 +375,4 @@ body {
   .home-grid { grid-template-columns: repeat(2, 1fr); }
   .timer-time { font-size: 40px; }
   .countdown-number { font-size: 28px; }
-  .auth-box { padding: 28px 20px; }
-}
+  }
