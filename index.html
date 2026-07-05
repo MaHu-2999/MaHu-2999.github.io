@@ -10,48 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ========== AUTH PAGE ========== -->
-  <div class="auth-page" id="auth-page">
-    <div class="auth-container" id="auth-container">
-      <div class="auth-box" id="auth-box-login">
-        <div class="auth-logo">📖 <span>LearnHub</span></div>
-        <p class="auth-sub">考研学习中心 · 登录</p>
-        <div class="form-group">
-          <label class="form-label">邮箱</label>
-          <input class="form-input" id="login-email" type="email" placeholder="your@email.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">密码</label>
-          <input class="form-input" id="login-password" type="password" placeholder="输入密码">
-        </div>
-        <div class="auth-error" id="auth-error"></div>
-        <button class="btn btn-primary auth-btn" id="btn-login">登 录</button>
-        <p class="auth-link">还没有账号？<a href="#" id="link-to-register">注册</a></p>
-      </div>
-      <div class="auth-box" id="auth-box-register" style="display:none">
-        <div class="auth-logo">📖 <span>LearnHub</span></div>
-        <p class="auth-sub">考研学习中心 · 注册</p>
-        <div class="form-group">
-          <label class="form-label">邮箱</label>
-          <input class="form-input" id="reg-email" type="email" placeholder="your@email.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">密码</label>
-          <input class="form-input" id="reg-password" type="password" placeholder="至少6位密码">
-        </div>
-        <div class="form-group">
-          <label class="form-label">确认密码</label>
-          <input class="form-input" id="reg-confirm" type="password" placeholder="再次输入密码">
-        </div>
-        <div class="auth-error" id="auth-error-reg"></div>
-        <button class="btn btn-primary auth-btn" id="btn-register">注 册</button>
-        <p class="auth-link">已有账号？<a href="#" id="link-to-login">登录</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== MAIN APP ========== -->
-  <div class="app" id="main-app" style="display:none">
+  <div class="app" id="main-app">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="logo">📖 <span>LearnHub</span></div>
@@ -78,10 +37,6 @@
       </nav>
       <div class="sidebar-footer">
         <div class="sidebar-stats" id="sidebar-stats"></div>
-        <div class="sidebar-user" id="sidebar-user" style="display:flex;align-items:center;gap:8px;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.5);font-size:12px;cursor:pointer;">
-          <span id="sidebar-email" style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
-          <span id="btn-logout" style="color:rgba(255,255,255,.4);">退出</span>
-        </div>
       </div>
     </aside>
 
@@ -102,12 +57,10 @@
     </main>
   </div>
 
-  <!-- ========== AI CHAT BUTTON ========== -->
   <button class="ai-chat-toggle" id="ai-chat-toggle" title="AI 学习助手">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v1H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4Z"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
   </button>
 
-  <!-- ========== AI CHAT PANEL ========== -->
   <div class="ai-chat-panel" id="ai-chat-panel">
     <div class="ai-chat-header">
       <span>AI 学习助手</span>
@@ -115,7 +68,7 @@
     </div>
     <div class="ai-chat-messages" id="ai-chat-messages">
       <div class="ai-msg ai-msg-bot">
-        <div class="ai-msg-content">你好！我是你的考研学习助手，可以帮你解答问题、总结知识点、出练习题。请问今天想学什么？</div>
+        <div class="ai-msg-content">你好！我是你的考研学习助手，可以帮你解答问题、总结知识点、出练习题。配置 API 密钥后即可使用。</div>
       </div>
     </div>
     <div class="ai-chat-input-wrap">
@@ -129,7 +82,6 @@
     </div>
   </div>
 
-  <!-- ========== MODAL ========== -->
   <div class="modal-overlay" id="modal-overlay"></div>
   <div class="modal" id="modal">
     <div class="modal-header">
